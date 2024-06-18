@@ -20,7 +20,7 @@ void print_test(std::string string)
 	std::cout << RESET << std::endl;
 }
 
-void try_catch_blocks(std::vector<int> vect, int to_find)
+void try_catch(std::vector<int> vect, int to_find)
 {
 	std::cout << "searching for " << to_find << std::endl;
 	try
@@ -48,8 +48,8 @@ int main(void)
 		std::cout << "pushing " << b << std::endl;
 	}
 	print_test("Searching within container");
-	try_catch_blocks(vect, 2);
-	try_catch_blocks(vect, 12);
-	try_catch_blocks(vect, 20);
-	try_catch_blocks(vect, 9);
+	try_catch(vect, 2);
+	try_catch(vect, 12);
+	try_catch(vect, 20);
+	try_catch(vect, 9);
 }
