@@ -105,17 +105,17 @@ unsigned int Span::getMaxSize() const
 
 std::ostream &operator<<(std::ostream &os, const Span &src)
 {
-	std::cout << "Span max: " << src.getMaxSize() << " | elements: ";
+	os << "Span max: " << src.getMaxSize() << " | elements: ";
 	const std::vector<int> &vect = src.getVect();
 	std::vector<int>::const_iterator i;
 	if (vect.size() == 0)
 	{
-		std::cout << "empty";
+		os << "empty";
 		return os;
 	}
 	for (i = vect.begin(); i != vect.end(); i++)
 	{
-		std::cout << "[" << *i << "]";
+		os << "[" << *i << "]";
 	}
 	return os;
 }
