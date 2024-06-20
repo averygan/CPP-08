@@ -41,11 +41,33 @@ void test_cases()
 	test.push_back(150);
 	test.push_back(200);
 
+	print_test("Creating empty span with size 1");
+	Span sp_one = Span(1);
+	std::cout << sp_one << std::endl;
+
+	print_test("Testing exception");
+	try
+	{
+		sp_one.addNumber(0);
+	}
+	catch (std::exception &e)
+	{
+		std::cout << e.what() << std::endl;
+	}
+	try
+	{
+		sp_one.addNumber(100);
+	}
+	catch (std::exception &e)
+	{
+		std::cout << e.what() << std::endl; 
+	}
+
 	print_test("Creating empty span with size 10000");
 	Span sp = Span(10000);
 	std::cout << sp << std::endl;
 
-	print_test("Adding 5 elements");
+	print_test("Adding 5 elements using addRange");
 	sp.addRange(test.begin(), test.end());
 	std::cout << sp << std::endl;
 

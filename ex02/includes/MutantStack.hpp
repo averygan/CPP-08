@@ -78,48 +78,4 @@ class MutantStack : public std::stack<T, Container>
 		};
 };
 
-// template <typename T>
-// class MutantStack : public std::stack<T>
-// {
-// 	public:
-// 		// Constructor
-// 		MutantStack() : std::stack<T>() {};
-// 		MutantStack(const MutantStack &copy) : std::stack<T>(copy) {};
-
-// 		// Destructor
-// 		~MutantStack() {};
-
-// 		// Assignment operator
-// 		MutantStack &operator=(const MutantStack &copy) 
-// 		{
-// 			if (this != &copy)
-// 				std::stack<T>::operator=(copy);
-// 			return *this;
-// 		};
-
-// 		// Iterators
-// 		typedef typename std::deque<T>::iterator iterator;
-// 		typedef typename std::deque<T>::const_iterator const_iterator;
-
-// 		iterator begin()
-// 		{
-// 			return std::stack<T>::c.begin();
-// 		};
-
-// 		iterator end()
-// 		{
-// 			return std::stack<T>::c.end();
-// 		};
-
-// 		const_iterator begin() const
-// 		{
-// 			return std::stack<T>::c.begin();
-// 		};
-
-// 		const_iterator end() const
-// 		{
-// 			return std::stack<T>::c.end();
-// 		};
-// };
-
 #endif
