@@ -32,15 +32,8 @@ void subject_tests()
 	std::cout << sp.longestSpan() << std::endl;
 }
 
-void test_cases()
+void exception_tests()
 {
-	std::vector<int> test;
-	test.push_back(0);
-	test.push_back(100);
-	test.push_back(101);
-	test.push_back(150);
-	test.push_back(200);
-
 	print_test("Creating empty span with size 1");
 	Span sp_one = Span(1);
 	std::cout << sp_one << std::endl;
@@ -62,6 +55,34 @@ void test_cases()
 	{
 		std::cout << e.what() << std::endl; 
 	}
+	try
+	{
+		sp_one.shortestSpan();
+	}
+	catch (std::exception &e)
+	{
+		std::cout << e.what() << std::endl;
+	}
+	try
+	{
+		sp_one.longestSpan();
+	}
+	catch (std::exception &e)
+	{
+		std::cout << e.what() << std::endl;
+	}
+}
+
+void test_cases()
+{
+	std::vector<int> test;
+	test.push_back(0);
+	test.push_back(100);
+	test.push_back(101);
+	test.push_back(150);
+	test.push_back(200);
+
+	exception_tests();
 
 	print_test("Creating empty span with size 10000");
 	Span sp = Span(10000);
